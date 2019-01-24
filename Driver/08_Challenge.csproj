@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9A0D585-FE24-4F87-9BE9-B2E82FB713C7}</ProjectGuid>
+    <ProjectGuid>{096A9D0F-5258-4AC0-B1A5-B2DBABD4CE0D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_01_Challenge</RootNamespace>
-    <AssemblyName>01_Challenge</AssemblyName>
+    <RootNamespace>Driver</RootNamespace>
+    <AssemblyName>Driver</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MenuItems.cs" />
-    <Compile Include="MenuItems_Repository.cs" />
+    <Compile Include="DriverInfo.cs" />
+    <Compile Include="DriverRepo.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\03_Challenge\03_Challenge\03_Challenge.csproj">
+      <Project>{BEBC5704-FD1B-49F4-B3D2-F337EF355A42}</Project>
+      <Name>03_Challenge</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
