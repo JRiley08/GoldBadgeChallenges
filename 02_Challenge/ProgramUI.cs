@@ -9,6 +9,7 @@ namespace _02_Challenge
 
         public void Run()
         {
+            SeedList();
             bool running = true;
             while (running)
             {
