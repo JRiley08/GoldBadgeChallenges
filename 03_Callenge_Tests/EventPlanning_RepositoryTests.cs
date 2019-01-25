@@ -8,6 +8,8 @@ namespace _03_Callenge_Tests
     [TestClass]
     public class EventPlanning_RepositoryTests
     {
+        EventPlanning_Repository eventrepo = new EventPlanning_Repository();
+ 
         [TestMethod]
         public void EventPlanning_Repository_AddOutingToList_ShouldBeCorrect()
         {
@@ -27,10 +29,51 @@ namespace _03_Callenge_Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
+        public void EventPlanning_Repository_GetEventList_CountShouldBeCorrect()
+        {
+            //Arrange
+            List<EventPlanning> eventlist = new List<EventPlanning>();
+
+            //Act 
+            int actual = eventlist.Count;
+            int expected = 4;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void EventPlanning_Repository_CalculateCost_ShouldBeCorrect()
+        {
+            //Arrange
+            EventPlanning_Repository eventrepo = new EventPlanning_Repository();
+            EventType type = EventType.Bowling;
+
+            //Act
+            decimal actual = eventrepo.AddCostOfOneType(type);
+            decimal expected = 100.01m;
+            //Assert
+            Assert.AreEqual(expected, actual);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        [TestMethod]
         public void EventPlanning_Repository_ViewListOfOutings_ShouldBeAcurate()
         {
             //Arrange
-            List<EventPlanning> _eventrep
+            List<EventPlanning> _eventrepo = new List<EventPlanning>();
+
+
 
 
 

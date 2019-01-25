@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Driver
 {
-    public class Driver
+    public class DriverInfo
     {
 
         public int CarID { get; set; }
@@ -15,7 +15,7 @@ namespace Driver
         public int MissedStop { get; set; }
         public int Following { get; set; }
 
-        public Driver(int carID, int overSpeed, int swerve, int missedStop, int following)
+        public DriverInfo(int carID, int overSpeed, int swerve, int missedStop, int following)
         {
             CarID = carID;
             OverSpeed = overSpeed;
@@ -23,7 +23,7 @@ namespace Driver
             MissedStop = missedStop;
             Following = following;
         }
-        public Driver()
+        public DriverInfo()
         {
                 
         }

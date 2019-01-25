@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Driver
 {
-    class DriverRepo
+    public class DriverRepo
     {
-        List<Driver> _driverData = new List<Driver>();
+        List<DriverInfo> _driverData = new List<DriverInfo>();
 
-        public void AddDriverToList(Driver driver)
+        public void AddDriverToList(DriverInfo driver)
         {
             _driverData.Add(driver);
         }
 
-        public List<Driver> GetDriverData()
+        public List<DriverInfo> GetDriverData()
         {
             return _driverData;
         }
        
-        public decimal CalculateDriverInsuranceOne(Driver driver)
+        public decimal CalculateDriverInsuranceOne(DriverInfo driver)
         {
             decimal speedCharge = 0m;
 
@@ -35,7 +35,7 @@ namespace Driver
             return speedCharge;
         }
 
-        public decimal CalculateDriverInsuranceTwo(Driver driver)
+        public decimal CalculateDriverInsuranceTwo(DriverInfo driver)
         {
             decimal sweerveCharge = 0m;
 
@@ -49,7 +49,7 @@ namespace Driver
                 sweerveCharge = 0;
             return sweerveCharge;
         }
-        public decimal CalculateDriverInsuranceThree(Driver driver)
+        public decimal CalculateDriverInsuranceThree(DriverInfo driver)
         {
             decimal stopCharge = 0m;
 
@@ -66,7 +66,7 @@ namespace Driver
           
             
         }
-        public decimal CalculateDriverInsuranceFour(Driver driver)
+        public decimal CalculateDriverInsuranceFour(DriverInfo driver)
         {
             decimal followCharge = 0m;
 
@@ -81,7 +81,7 @@ namespace Driver
             return followCharge;
 
         }
-        public decimal TotalInsuranceCost(Driver driver)
+        public decimal TotalInsuranceCost(DriverInfo driver)
         {
             decimal Cost = 30m;
 

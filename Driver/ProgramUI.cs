@@ -24,7 +24,7 @@ namespace Driver
             Console.WriteLine("How many times did the driver follow to close to another driver?");
             int following = int.Parse(Console.ReadLine());
 
-            Driver driver = new Driver(carID, overSpeed, swerve, missedStop, following);
+            DriverInfo driver = new DriverInfo(carID, overSpeed, swerve, missedStop, following);
             _driver.AddDriverToList(driver);
             decimal totalCost = _driver.TotalInsuranceCost(driver);
 
